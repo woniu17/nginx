@@ -10,10 +10,10 @@ cd ${rpmdir}
 
 # 通过tar包构建rpm包，似乎不需要指定sourcedir和specdir
                 #--define="_sourcedir ${rpmdir}/source"  \
-                #--define="_specdir ${rpmdir}/spec"    \
 rpmbuild -tb --define="_topdir ${rpmdir}" \
-                --define="_builddir ${rpmdir}/build"   \
+                --define="_builddir ${rpmdir}"   \
+                --define="_specdir ${rpmdir}"    \
                 --define="_buildrootdir ${rpmdir}/buildroot"   \
-                --define="_rpmdir ${rpmdir}/rpm"       \
-                --define="_srcrpmdir ${rpmdir}/srcrpm" \
+                --define="_rpmdir ${rpmdir}"       \
+                --define="_srcrpmdir ${rpmdir}" \
                 nginx-${version}-${release}.tar.gz
