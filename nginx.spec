@@ -32,7 +32,7 @@ nginx server debuginfo
 # 准备阶段
 %prep
 # 这个宏(%setup)的作用静默模式解压并cd到%_builddir
-%setup -c %{name}-%{version}
+%setup -c
 
 # 编译阶段
 %build
