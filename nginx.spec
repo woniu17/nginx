@@ -14,8 +14,8 @@ Source0: %{name}-%{version}-%{release}.tar.gz
 # BuildRoot是软件make install的测试安装目录，也就是测试中的根目录
 # _tmppath默认为/var/tmp
 # 该设置在centos5有效，在centos6无效，因此使用rpmbuild命令选项_buildrootdir指定
-#BuildRoot: %{_tmppath}/%{name}-%{version}-root
-BuildRoot: /var/tmp/nginx-1.0.0-root
+# BuildRoot: %{_tmppath}/%{name}-%{version}-root
+# BuildRoot: /var/tmp/nginx-1.0.0-root
 
 %description
 nginx server
