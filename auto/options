@@ -17,6 +17,7 @@ NGX_USER=
 NGX_GROUP=
 NGX_BUILD=
 
+# if not $CC or $CC is null, return "cc"
 CC=${CC:-cc}
 CPP=
 NGX_OBJS=objs
@@ -168,6 +169,8 @@ NGX_POST_CONF_MSG=
 
 opt=
 
+# arguments in command line
+# for option in "$@":
 for option
 do
     opt="$opt `echo $option | sed -e \"s/\(--[^=]*=\)\(.* .*\)/\1'\2'/\"`"

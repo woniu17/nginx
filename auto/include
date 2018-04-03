@@ -37,6 +37,7 @@ if [ -x $NGX_AUTOTEST ]; then
 
     echo " found"
 
+    # ngx_include=foo/bar.h  --> ngx_name=FOO_BAR_H
     ngx_name=`echo $ngx_include \
               | tr abcdefghijklmnopqrstuvwxyz/. ABCDEFGHIJKLMNOPQRSTUVWXYZ__`
 
